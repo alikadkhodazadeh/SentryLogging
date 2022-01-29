@@ -15,12 +15,9 @@ namespace NLogWebApp.Controllers
 
         public IActionResult Index()
         {
-            while (true)
-            {
-                _logger.LogTrace("NLog", "LogTrace");
-                _logger.LogDebug("NLog", "LogDebug");
-                _logger.LogError("NLog", "LogError");
-            }
+            //_logger.LogTrace("NLog", "LogTrace");
+            //_logger.LogDebug("NLog", "LogDebug");
+            //_logger.LogError("NLog", "LogError");
             return View();
         }
 
