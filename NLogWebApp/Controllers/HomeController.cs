@@ -21,6 +21,8 @@ namespace NLogWebApp.Controllers
             }
             catch (ArgumentNullException ex)
             {
+                _logger.LogTrace(ex, ex.Message);
+                _logger.LogDebug(ex, ex.Message);
                 _logger.LogError(ex, ex.Message);
             }
 
