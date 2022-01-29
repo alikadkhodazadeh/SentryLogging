@@ -11,10 +11,7 @@ builder.WebHost.ConfigureLogging(conf =>
         opts.Dsn = "https://1f5fb4e527e84b96a8fe2cef217c19d6@o1129954.ingest.sentry.io/6173894";
         opts.Debug = true;
     });
-
     conf.ClearProviders();
-
-    conf.SetMinimumLevel(LogLevel.Trace);
 });
 
 builder.Host.UseNLog();

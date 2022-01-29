@@ -15,17 +15,12 @@ namespace NLogWebApp.Controllers
 
         public IActionResult Index()
         {
-            try
+            while (true)
             {
-                throw new ArgumentNullException();
+                _logger.LogTrace("NLog", "LogTrace");
+                _logger.LogDebug("NLog", "LogDebug");
+                _logger.LogError("NLog", "LogError");
             }
-            catch (ArgumentNullException ex)
-            {
-                _logger.LogTrace(ex, ex.Message);
-                _logger.LogDebug(ex, ex.Message);
-                _logger.LogError(ex, ex.Message);
-            }
-
             return View();
         }
 
