@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SeriLogWebApp.Models;
+using NLogWebApp.Models;
 using System.Diagnostics;
 
-namespace SeriLogWebApp.Controllers
+namespace NLogWebApp.Controllers
 {
     public class HomeController : Controller
     {
@@ -15,6 +15,15 @@ namespace SeriLogWebApp.Controllers
 
         public IActionResult Index()
         {
+            try
+            {
+                throw new ArgumentNullException();
+            }
+            catch (ArgumentNullException ex)
+            {
+                _logger.LogError(ex, ex.Message);
+            }
+
             return View();
         }
 

@@ -1,4 +1,4 @@
-namespace SeriLogWebApp.Models
+namespace NLogWebApp.Models
 {
     public class ErrorViewModel
     {
